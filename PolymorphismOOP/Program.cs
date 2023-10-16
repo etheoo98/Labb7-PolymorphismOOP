@@ -13,7 +13,7 @@ internal static class Program
 {
     public static void Main()
     {
-        // Create an array of IGeometry objects.
+        // An array of IGeometry objects using object reference.
         IGeometry[] geometries = {
             new Circle(),
             new Cube(),

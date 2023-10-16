@@ -3,18 +3,15 @@
 namespace PolymorphismOOP.Models;
 
 public class Ellipse : IGeometry
-{
-    // Class fields.
-    private double _majorAxis;
-    private double _minorAxis;
-
+{ 
+    public string Name => "Ellipse";
+    public double Area => Math.PI * MajorAxis * MinorAxis;
     /*
-     * Class properties.
+     * We check the value of majorAxis, to ensure that it is a positive value, since major axes can't be negative,
+     * before we assign the value to the _majorAxis field. If it is not a positive value an exception is thrown.
      *
-     * An Exception will be thrown if a developer attempts to assign a non-positive value to _majorAxis.
-     * A comparison of the two axes is performed to ensure that the values aren't equal, since it's not an
-     * ellipse if they are, but rather a circle. If they are equal, an exception is thrown, informing the developer
-     * that they're not using the appropriate class.
+     * A comparison of the two axes is also performed to ensure that the values aren't considered equal, since it's not
+     * an ellipse if they are, but rather a circle. If they are considered equal, an exception is thrown.
      *
      * The same is logic is applied in the setter of MinorAxis, except it's vice versa.
      */
@@ -31,7 +28,6 @@ public class Ellipse : IGeometry
             _majorAxis = value;
         }
     }
-
     public double MinorAxis
     {
         get => _minorAxis;
@@ -46,13 +42,12 @@ public class Ellipse : IGeometry
         }
     }
     
-    public string Name => "Ellipse";
-    public double Area => Math.PI * MajorAxis * MinorAxis;
-
-    // Constructor with default values.
     public Ellipse(double majorAxis = 10, double minorAxis = 4)
     {
         MajorAxis = majorAxis;
         MinorAxis = minorAxis;
     }
+    
+    private double _majorAxis;
+    private double _minorAxis;
 }

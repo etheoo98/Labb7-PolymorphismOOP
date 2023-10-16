@@ -4,9 +4,16 @@ namespace PolymorphismOOP.Models;
 
 public class Triangle : IGeometry
 {
-    private double _width;
-    private double _height;
-
+    public string Name => "Triangle";
+    public double Area => Width * Height / 2;
+    
+    /*
+     * We check the value of width sent to the constructor, to ensure that it is a positive value, since widths
+     * can't be negative, before we assign the value to the _width field. If it is not a positive value an exception
+     * is thrown.
+     *
+     * The same is logic is applied in the setter of Height, except it's vice versa.
+     */
     public double Width
     {
         get => _width;
@@ -16,7 +23,6 @@ public class Triangle : IGeometry
             _width = value;
         }
     }
-
     public double Height
     {
         get => _height;
@@ -26,14 +32,13 @@ public class Triangle : IGeometry
             _height = value;
         }
     }
-
-    public string Name => "Triangle";
-    public double Area => Width * Height / 2;
-
-    // Constructor with default values.
+    
     public Triangle(double width = 2, double height = 6)
     {
         Width = width;
         Height = height;
     }
+    
+    private double _width;
+    private double _height;
 }

@@ -4,10 +4,13 @@ namespace PolymorphismOOP.Models;
 
 public class Circle : IGeometry
 {
-    // Class field.
-    private double _radius;
-    
-    // Class Property.
+    public virtual string Name => "Circle";
+    public virtual double Area => Math.PI * Math.Pow(Radius, 2);
+    /*
+     * We check the value of radius sent to the constructor, to ensure that it is a positive value, since radii
+     * can't be negative, before we assign the value to the _radius field. If it is not a positive value an exception
+     * is thrown.
+     */
     public double Radius
     {
         get => _radius;
@@ -19,13 +22,10 @@ public class Circle : IGeometry
         }
     }
     
-    // Virtual properties that can be overridden by class inheritors.
-    public virtual string Name => "Circle";
-    public virtual double Area => Math.PI * Math.Pow(Radius, 2);
-
-    // Constructor with a default value.
     public Circle(double radius = 5)
     {
         Radius = radius;
     }
+    
+    private double _radius;
 }

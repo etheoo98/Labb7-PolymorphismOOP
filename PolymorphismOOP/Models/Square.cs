@@ -3,14 +3,12 @@
 namespace PolymorphismOOP.Models;
 
 public class Square : IGeometry
-{
-    // Class field.
-    private double _side;
-
+{ 
+    public virtual string Name => "Square";
+    public virtual double Area => Math.Pow(Side, 2);
     /*
-     * Class Property.
-     *
-     * An exception will be thrown if a developer attempts to assign a non-positive value to _side.
+     * We check the value of side, to ensure that it is a positive value, since sides can't be negative, before we
+     * assign the value to the _side field. If it is not a positive value an exception is thrown.
      */
     public double Side
     {
@@ -22,14 +20,11 @@ public class Square : IGeometry
             _side = value;
         }
     }
-
-    // Virtual properties that should be overridden by class inheritors.
-    public virtual string Name => "Square";
-    public virtual double Area => Math.Pow(Side, 2);
-
-    // Constructor with a default value.
+    
     public Square(double side = 6)
     {
         Side = side;
     }
+    
+    private double _side;
 }
