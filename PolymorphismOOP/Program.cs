@@ -1,6 +1,6 @@
 ﻿/*
  * Author: Theodor Hägg (.NET23)
- * Website: https://www.github.com/etheoo98/PolymorphismOOP
+ * Website: https://www.github.com/etheoo98/Labb7-PolymorphismOOP
  * Date: October 16, 2023
  */
 
