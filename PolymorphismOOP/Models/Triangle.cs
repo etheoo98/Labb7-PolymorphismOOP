@@ -19,7 +19,7 @@ public class Triangle : IGeometry
         get => _width;
         set
         {
-            if (value <= 0) throw new Exception("Attempted to assign non-positive value to _width");
+            if (value <= 0) throw new Exception("Attempted to assign non-positive value to '_width'");
             _width = value;
         }
     }
@@ -28,7 +28,7 @@ public class Triangle : IGeometry
         get => _height;
         set
         {
-            if (value <= 0) throw new Exception("Attempted to assign non-positive value to _height");
+            if (value <= 0) throw new Exception("Attempted to assign non-positive value to '_height'");
             _height = value;
         }
     }

@@ -17,7 +17,7 @@ public class Square : IGeometry
         set
         {
             if (value <= 0)
-                throw new Exception("Attempted to assign non-positive value to _side");
+                throw new Exception("Attempted to assign non-positive value to '_side'");
             _side = value;
         }
     }

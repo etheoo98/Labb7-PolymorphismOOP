@@ -22,10 +22,13 @@ public class Ellipse : IGeometry
         set
         {
             if (value <= 0)
-                throw new Exception("Attempted to assign non-positive value to _majorAxis");
+                throw new Exception("Attempted to assign non-positive value to '_majorAxis'");
             if (Math.Abs(value - _minorAxis) < 1E-12)
-                throw new Exception("Attempted to assign the same value as _minorAxis to _majorAxis. If " +
-                                    "this was intentional, use the Circle class instead.");
+                throw new Exception("Attempted to assign the same value as '_minorAxis' to '_majorAxis'. If " +
+                                    "this was intentional, use the 'Circle' class instead.");
+            if (value < _minorAxis)
+                throw new Exception("Attempted to assign a value lesser than _minorAxis to '_majorAxis'. " +
+                                    "'_majorAxis' must be greater than '_minorAxis'.");
             _majorAxis = value;
         }
     }
@@ -35,10 +38,13 @@ public class Ellipse : IGeometry
         set
         {
             if (value <= 0)
-                throw new Exception("Attempted to assign non-positive value to _minorAxis");
+                throw new Exception("Attempted to assign non-positive value to '_minorAxis'");
             if (Math.Abs(value - _majorAxis) < 1E-12)
-                throw new Exception("Attempted to assign the same value as _majorAxis to _minorAxis. If " +
-                                    "this was intentional, use the Circle class instead.");
+                throw new Exception("Attempted to assign the same value as '_majorAxis' to '_minorAxis'. If " +
+                                    "this was intentional, use the 'Circle' class instead.");
+            if (value > _majorAxis)
+                throw new Exception("Attempted to assign a value greater than '_majorAxis' to '_minorAxis'. " +
+                                    "'_minorAxis' must be less than '_minorAxis'.");
             _minorAxis = value;
         }
     }

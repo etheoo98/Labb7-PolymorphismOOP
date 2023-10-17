@@ -14,7 +14,8 @@ internal static class Program
     public static void Main()
     {
         // An array of IGeometry objects using object reference.
-        IGeometry[] geometries = {
+        IGeometry[] geometries =
+        {
             new Circle(),
             new Cube(),
             new Ellipse(),
@@ -23,7 +24,7 @@ internal static class Program
             new Rhombus(),
             new Sphere(),
             new Square(),
-            new Triangle(),
+            new Triangle()
         };
         
         // Iterate over each element in the array and output the return values of Name and Area.

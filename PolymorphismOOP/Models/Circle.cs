@@ -17,7 +17,7 @@ public class Circle : IGeometry
         set
         {
             if (value <= 0)
-                throw new Exception("Attempted to assign non-positive value to _radius");
+                throw new Exception("Attempted to assign non-positive value to '_radius'");
             _radius = value;
         }
     }

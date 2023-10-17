@@ -22,10 +22,10 @@ public class Rectangle : IGeometry
         set
         {
             if (value <= 0)
-                throw new Exception("Attempted to assign non-positive value to _width.");
+                throw new Exception("Attempted to assign non-positive value to '_width'.");
             if (Math.Abs(value - Height) < 1E-12)
-                throw new Exception("Attempted to assign the same value as _height to width. If this was " +
-                                    "intentional, use the Square or Rhombus class instead.");
+                throw new Exception("Attempted to assign the same value as '_height' to '_width'. If this was " +
+                                    "intentional, use the 'Square' or 'Rhombus' class instead.");
             _width = value;
         }
     }
@@ -35,10 +35,10 @@ public class Rectangle : IGeometry
         set
         {
             if (value <= 0)
-                throw new Exception("Attempted to assign non-positive value to _height.");
+                throw new Exception("Attempted to assign non-positive value to '_height'.");
             if (Math.Abs(value - Width) < 1E-12)
-                throw new Exception("Attempted to assign the same value as _width to _height. If this was " +
-                                    "intentional, use the Square or Rhombus class instead.");
+                throw new Exception("Attempted to assign the same value as '_width' to '_height'. If this was " +
+                                    "intentional, use the 'Square' or 'Rhombus' class instead.");
             _height = value;
         }
     }
