@@ -8,8 +8,8 @@ public class Circle : IGeometry
     public virtual double Area => Math.PI * Math.Pow(Radius, 2);
     /*
      * We check the value of radius sent to the constructor, to ensure that it is a positive value, since radii
-     * can't be negative, before we assign the value to the _radius field. If it is not a positive value an exception
-     * is thrown.
+     * aren't expected to be zero or negative, before we assign the value to the _radius field. If it is not a positive
+     * value an exception is thrown.
      */
     public double Radius
     {

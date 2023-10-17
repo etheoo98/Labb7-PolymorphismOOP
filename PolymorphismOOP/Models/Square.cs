@@ -7,8 +7,9 @@ public class Square : IGeometry
     public virtual string Name => "Square";
     public virtual double Area => Math.Pow(Side, 2);
     /*
-     * We check the value of side, to ensure that it is a positive value, since sides can't be negative, before we
-     * assign the value to the _side field. If it is not a positive value an exception is thrown.
+     * We check the value of side sent to the constructor, to ensure that it is a positive value, since sides aren't
+     * expected to be zero or negative, before we assign the value to the _side field. If it is not a positive value an
+     * exception is thrown.
      */
     public double Side
     {

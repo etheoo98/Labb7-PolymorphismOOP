@@ -8,11 +8,11 @@ public class Triangle : IGeometry
     public double Area => Width * Height / 2;
     
     /*
-     * We check the value of width sent to the constructor, to ensure that it is a positive value, since widths
-     * can't be negative, before we assign the value to the _width field. If it is not a positive value an exception
-     * is thrown.
+     * We check the value of width sent to the constructor, to ensure that it is a positive value, since widths aren't
+     * expected to be negative or zero, before we assign the value to the _width field. If it is not a positive value an
+     * exception is thrown.
      *
-     * The same is logic is applied in the setter of Height, except it's vice versa.
+     * The same is logic is applied in the setter of Height.
      */
     public double Width
     {

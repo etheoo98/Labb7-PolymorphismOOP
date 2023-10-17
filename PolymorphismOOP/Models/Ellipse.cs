@@ -7,8 +7,9 @@ public class Ellipse : IGeometry
     public string Name => "Ellipse";
     public double Area => Math.PI * MajorAxis * MinorAxis;
     /*
-     * We check the value of majorAxis, to ensure that it is a positive value, since major axes can't be negative,
-     * before we assign the value to the _majorAxis field. If it is not a positive value an exception is thrown.
+     * We check the value of majorAxis sent to the constructor, to ensure that it is a positive value, since major axes
+     * aren't expected to be, zero or negative, before we assign the value to the _majorAxis field. If it is not a
+     * positive value an exception is thrown.
      *
      * A comparison of the two axes is also performed to ensure that the values aren't considered equal, since it's not
      * an ellipse if they are, but rather a circle. If they are considered equal, an exception is thrown.

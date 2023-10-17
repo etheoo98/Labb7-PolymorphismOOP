@@ -7,8 +7,9 @@ public class Rectangle : IGeometry
     public virtual string Name => "Rectangle";
     public double Area => Width * Height;
     /*
-     * We check the value of width, to ensure that it is a positive value, since widths can't be negative, before we
-     * assign the value to the _width field. If it is not a positive value an exception is thrown.
+     * We check the value of width sent to the constructor, to ensure that it is a positive value, since widths aren't,
+     * expected to be negative or zero, before we assign the value to the _width field. If it is not a positive value
+     * an exception is thrown.
      *
      * A comparison of the two axes is also performed to ensure that the values aren't considered equal, since it's not
      * a rectangle if they are, but rather a square or rhombus. If they are considered equal, an exception is thrown.
